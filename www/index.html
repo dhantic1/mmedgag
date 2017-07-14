@@ -712,7 +712,7 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 		<div id="search-dropper">
 		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="https://www.medgag.com/">
-				<input type="text" name="s" id="search-text" placeholder="Search this website…" class="body-font" tabindex="1">
+				<input type="text" name="s" id="search-text" placeholder="Search this websiteÂ…" class="body-font" tabindex="1">
 				<input name="submit" type="submit" id="search-submit" value="Search" class="button-dark body-font" tabindex="2">
 			</form>
 		</div>
@@ -1190,4 +1190,13 @@ form#fep-submission-form {
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+	    jQuery(function() { // Shorthand for $(document).ready(function() {
+      jQuery('a').click(function(e) {
+            e.preventDefault();
+            var link = jQuery(this);
+			jQuery("#content").load(link.attr('href')+" #content > *");
+            
+           // link.parents('div.tools').fadeOut('slow');
+      });
+});
     </script></body></html>
