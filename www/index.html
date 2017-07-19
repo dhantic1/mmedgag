@@ -1818,6 +1818,28 @@ window.onclick = function(event) {
     <script type="text/javascript">
         app.initialize();
 	     
+      var blue = document.getElementById("content");
+    
+    Hammer(blue).on("swiperight", function() {
+         jQuery('#menu-toggle').click()  
+    });
+    function content() {
+		jQuery('#content a').click(function(e) {
+            e.preventDefault();
+            window.plugins.spinnerDialog.show(null, null, true);
+            var link = jQuery(this);
+            var page = link.attr('href')+' #content';
+			jQuery("#content").load(page, function(response, status, xhr){
+  if(status == "error") {
+    window.plugins.spinnerDialog.hide();
+	alert("Some error in loading");
+  } else {
+    window.plugins.spinnerDialog.hide();
+	content();
+  }
+});
+      });
+	}
       jQuery('a').click(function(e) {
             e.preventDefault();
             window.plugins.spinnerDialog.show(null, null, true);
@@ -1825,12 +1847,14 @@ window.onclick = function(event) {
             var page = link.attr('href')+' #content';
 			jQuery("#content").load(page, function(response, status, xhr){
   if(status == "error") {
-    //ajaxOnFailure(response);
+    window.plugins.spinnerDialog.hide();
+	alert("Some error in loading");
   } else {
     window.plugins.spinnerDialog.hide();
+    content();
   }
 });
             jQuery('#menu-toggle').click();
-           // link.parents('div.tools').fadeOut('slow');
+          
       });
    </script></body></html>
