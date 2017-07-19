@@ -63,5 +63,8 @@ document.addEventListener('deviceready', function () {
   // Call syncHashedEmail anywhere in your app if you have the user's email.
   // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
   // window.plugins.OneSignal.syncHashedEmail(userEmail);
+    //statusbar
+    StatusBar.backgroundColorByHexString("#009682");
 }, false);
+
 
