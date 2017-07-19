@@ -65,6 +65,14 @@ document.addEventListener('deviceready', function () {
   // window.plugins.OneSignal.syncHashedEmail(userEmail);
     //statusbar
     StatusBar.backgroundColorByHexString("#009682");
+    StatusBar.hide();
+
 }, false);
+document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onBackKeyDown() {
+    history.go(-1);
+    navigator.app.backHistory();
+}
 
 
