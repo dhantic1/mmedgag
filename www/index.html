@@ -1698,6 +1698,7 @@ window.onclick = function(event) {
     <script type="text/javascript">
         app.initialize();
    //google login
+	   
     function loginG() {
     window.plugins.googleplus.login(
         {},
@@ -1712,7 +1713,21 @@ window.onclick = function(event) {
 		alert(msg);
         }
     );
-  }	    
+  }	
+	    function logout() {
+    window.plugins.googleplus.logout(
+        function (msg) {
+          //document.querySelector("#image").style.visibility = 'hidden';
+          //document.querySelector("#feedback").innerHTML = msg;
+		alert(msg);
+        },
+        function (msg) {
+          //document.querySelector("#feedback").innerHTML = msg;
+		alert(msg);
+		
+        }
+    );
+  }
     
     function content() {
 		jQuery('#content a').click(function(e) {
@@ -1770,7 +1785,8 @@ window.onclick = function(event) {
 <button class="body-font-fb body-font">Login With Facebook</button>
 <button class="body-font-google body-font" onclick="loginG()">Login With Google</button>
 	    <button onclick="window.plugins.googleplus.getSigningCertificateFingerprint(function(res){alert(res)}, function(res){alert(res)})">get cert fingerprint (Android)</button>
-      </div>
+     <button onclick="disconnect()">Disconnect</button>
+	  </div>
 
     <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn body-font">Cancel</button>
