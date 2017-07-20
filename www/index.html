@@ -1646,34 +1646,7 @@ form#fep-submission-form {
 </div>	<!-- Button to open the modal login form -->
 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
-<!-- The Modal -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" 
-class="close" title="Close Modal">&times;</span>
-
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div><style>/* The Modal (background) */
+<style>/* The Modal (background) */
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
@@ -1687,6 +1660,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 /* Set a style for all buttons */
@@ -1698,6 +1672,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
 }
 
 /* Add a hover effect for buttons */
@@ -1746,23 +1721,38 @@ span.psw {
     }
 }
 .modal {
-    //display: none;
     position: fixed;
     z-index: 999999999;
     left: 0;
     top: 0;
     background: white;
     width: 100%;
+    background-image: url(img/drawable-port-hdpi-screen.png);
     height: 100%;
     overflow: auto;
 }
 /* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+.modal-content {     background-color: #fefefe;      margin: 0px auto;      border: 0px solid #888;
+    width: 100%;     height: 100%;
 }
+form.modal-content.animate {
+    background: rgba(0, 0, 0, 0.36);
+    border: 0;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgba(204, 204, 204, 0);
+    box-sizing: border-box;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.46);
+}
+p.body-font {
+    color: white;
+}
+form.modal-content-register.animate { border: 0; background-color: rgba(0, 0, 0, 0.21); }
 
 /* The Close Button */
 .close {
@@ -1774,6 +1764,15 @@ span.psw {
     font-size: 35px;
     font-weight: bold;
 }
+
+button.body-font-fb.body-font {
+    background-color: #2075bf;
+}
+
+button.body-font-google.body-font {
+    background-color: #d43f04;
+}
+
 
 /* Close button on hover */
 .close:hover,
@@ -1853,4 +1852,33 @@ window.onclick = function(event) {
             jQuery('#menu-toggle').click();
           
       });
-   </script></body></html>
+   </script></body>
+<div id="id01" class="modal" style="display: block;">
+
+
+  
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    
+
+    <div class="container body-font">
+      
+      
+
+      
+      
+
+
+
+      
+<button class="body-font-fb body-font">Login With Facebook</button>
+<button class="body-font-google body-font">Login With Google</button>
+      </div>
+
+    <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn body-font">Cancel</button>
+      
+    </div>
+  </form>
+
+</div></html>
