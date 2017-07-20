@@ -1,5 +1,4 @@
 
-
 	<!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 	<head>
@@ -74,18 +73,14 @@
           <link rel="manifest"
             href="https://www.medgag.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
           <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
-
       window.OneSignal = window.OneSignal || [];
-
       OneSignal.push( function() {
         OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
         OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
         OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
-
         OneSignal.setDefaultNotificationUrl("https://www.medgag.com");
         var oneSignal_options = {};
         window._oneSignalInitOptions = oneSignal_options;
-
         oneSignal_options['wordpress'] = true;
 oneSignal_options['appId'] = '1d706388-a641-4142-a191-2ba069dd3c5a';
 oneSignal_options['autoRegister'] = true;
@@ -107,14 +102,11 @@ oneSignal_options['notifyButton']['showCredit'] = true;
 oneSignal_options['notifyButton']['text'] = {};
               OneSignal.init(window._oneSignalInitOptions);
                     });
-
       function documentInitOneSignal() {
         var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
-
         var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
           oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
       }
-
       if (document.readyState === 'complete') {
            documentInitOneSignal();
       }
@@ -152,7 +144,6 @@ img.emoji {
 .body-font{
 	 font-family: 'Roboto', sans-serif;
 }
-
 </style>
 <link rel='stylesheet' id='foundation_flickity_css-css'  href='https://www.medgag.com/wp-content/plugins/wptouch-pro/themes/foundation/modules/flickity/flickity.min.css' type='text/css' media='screen' />
 <link rel='stylesheet' id='foundation_slideout-css'  href='https://www.medgag.com/wp-content/plugins/wptouch-pro/themes/foundation/modules/slideout/slideout.css' type='text/css' media='all' />
@@ -161,7 +152,6 @@ img.emoji {
 <link rel='stylesheet' id='foundation-framework-style-css'  href='https://www.medgag.com/wp-content/plugins/wptouch-pro/themes/foundation/default/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ap-theme-css-css'  href='https://www.medgag.com/wp-content/plugins/anspress-3.0.7/theme/default/css/main.css?v=3.0.7' type='text/css' media='all' />
 <style id='ap-theme-css-inline-css' type='text/css'>
-
         #anspress .ap-q-cells{
             margin-left: 60px;
         }
@@ -288,9 +278,7 @@ var sidebar_login_params = {"ajax_url":"https:\/\/www.medgag.com\/wp-admin\/admi
 				}
 			}
 		}
-
 		initJQuery();
-
 	</script>
 
 	<script type="text/javascript" src="https://www.medgag.com/wp-content/plugins/advanced-ajax-page-loader/ajax-page-loader.js"></script>
@@ -369,7 +357,6 @@ var sidebar_login_params = {"ajax_url":"https:\/\/www.medgag.com\/wp-admin\/admi
 <style>.ios7.web-app-mode.has-fixed header{ background-color: rgba(0,150,130,.88);}</style>		<style type="text/css" id="wp-custom-css">
 			/*
 You can add your own CSS here.
-
 Click the help icon above to learn more.
 */
 		</style>
@@ -378,27 +365,22 @@ Click the help icon above to learn more.
 <!-- Foundation Styles -->
 <style type='text/css'>
 /* Default WPtouch Pages Menu Styling */
-
 .wptouch-menu .menu-tree a, .wptouch-menu .menu-tree span {
 	color: rgba(0,0,0,.65);
 	text-shadow: rgba(255,255,255,.3) 0 1px 0;
 }
-
 .wptouch-menu .menu-tree > li {
 	border-bottom: 1px solid rgba(0,0,0,.08);
 	border-top: 1px solid rgba(255,255,255,.1);
 }
-
 .menu-tree li {
 	clear: both;
 	position: relative;
 	line-height: 100%;
 }
-
 .wptouch-menu ul ul {
 	display: none;
 }
-
 .menu-tree li span {
 	-webkit-transition-duration: 300ms;
 	-o-transition-duration: 300ms;
@@ -410,30 +392,25 @@ Click the help icon above to learn more.
 	padding: 15px;
 	float: right;
 }
-
 .menu-tree li span.toggle {
 	-webkit-box-shadow: inset rgba(0,0,0,.2) 0px 4px 4px;
 	box-shadow: inset rgba(0,0,0,.2) 0px 4px 4px;
 	border: none;
 }
-
 .menu-tree li span:before {
 	font-family: 'wptouch-icons';
 	content:"\e80f";
 }
-
 .menu-tree li span.toggle:before {
 	content:"\e80e";
 	font-weight: normal;
 	font-style: normal;
 }
-
 ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 	border: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-
 .menu-tree li a {
 	display: block;
 	-o-text-overflow: ellipsis;
@@ -445,7 +422,6 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 	padding-bottom: 15px;
 	padding-right: 32px;
 }
-
 .menu-tree li img {
 	width: 26px;
 	height: 26px;
@@ -455,7 +431,6 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 	top: 8px;
 	padding-left: 6px;
 }
-
 .menu-tree > .open-tree {
 	background: rgba(0,0,0,.03);
 	-webkit-box-shadow: inset rgba(0,0,0,.25) 0px 0px 4px;
@@ -464,19 +439,15 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 	margin-top: -1px;
 	padding-top: 1px;
 }
-
 .menu-tree li.no-icon {
 	padding-left: 10px;
 }
-
 .menu-tree ul li {
 	border-style: none !important;
 	clear: both;
 	padding-left: 15px;
 }
-
 /* @group RTL */
-
 .rtl .menu-tree li span {
 	-webkit-transition-duration: 300ms;
 	-o-transition-duration: 300ms;
@@ -487,53 +458,40 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 	border-right: 1px solid rgba(255,255,255,.1);
 	border-left: none;
 }
-
 .rtl .menu-tree li span.toggle {
 	-webkit-box-shadow: inset rgba(0,0,0,.2) 0px 4px 4px;
 	box-shadow: inset rgba(0,0,0,.2) 0px 4px 4px;
 	border: none;
 }
-
 .rtl .menu-tree li.menu-item img {
 	float: right;
 }
-
 .rtl .menu-tree li.menu-item a {
 	padding-left: 32px;
 	padding-right: 0px;
 }
-
 .rtl .menu-tree li.no-icon {
 	padding-right: 10px;
 }
-
 .rtl .menu-tree ul li {
 	padding-left: 0px;
 	padding-right: 15px;
 }
-
 /* @end */
-
 /* @group Dark Header */
-
 .dark-header .wptouch-menu .menu-tree a, .dark-header .wptouch-menu .menu-tree span {
 	color: rgba(255,255,255,.9);
 	text-shadow: rgba(0,0,0,.3) 0 -1px 0;
 }
-
 .dark-header .wptouch-menu .menu-tree span:before {
 	color: rgba(255,255,255,.9);
 	text-shadow: rgba(0,0,0,.5) 0 -1px 0;
 }
-
 .dark-header .wptouch-menu .menu-tree > li.menu-item {
 	border-bottom: 1px solid rgba(0,0,0,.12);
 	border-top: 1px solid rgba(255,255,255,.06);
 }
-
 /* @end */
-
-
 </style>
 <meta name="theme-color" content="#009682">			</head>
 
@@ -678,13 +636,9 @@ h2.text-nn {
 .elementor.elementor-2360 {
     margin: -4px;
 }
-
 </style>
 <style>
       .elementor-icon-list-item:not(:last-child){padding-bottom:calc(22px/2);} .elementor-icon-list-item:not(:first-child){margin-top:calc(22px/2);} .elementor-icon-list-item, .elementor-icon-list-item a{justify-content:flex-start;} .elementor-icon-list-icon{width:47px;} .elementor-icon-list-icon i{font-size:47px;} .elementor-icon-list-text{padding-left:18px;} .elementor-icon-list-item{font-size:21px;}
-
-
-
 </style>		</div>
 				</div>
 				<section data-id="guzichw" class="elementor-element elementor-element-guzichw elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section">
@@ -1227,10 +1181,8 @@ v["sidebars_widgets[ap-activity]"] = [];
 			var r = (rgb >> 16) & 0xff;  // extract red
 			var g = (rgb >>  8) & 0xff;  // extract green
 			var b = (rgb >>  0) & 0xff;  // extract blue
-
 			return 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709'
 		}
-
 	( function( jQuery ){
 			wp.customize('wptouch_bauhaus_background_color',function( value ) {
 				value.bind( function( to ) {
@@ -1308,14 +1260,12 @@ body, header, .wptouch-menu, .pushit, #search-dropper, .date-circle, .list-view 
     color: #b70be4;
     
 }
-
 #anspress .ap-term-category-box > li {
     float: inherit;
     margin: 0;
     padding: 0px;
     width: 100%;
 }
-
 #answer-form-c {
     margin-right: 40px;
     margin-top: 20px;
@@ -1341,7 +1291,6 @@ body, header, .wptouch-menu, .pushit, #search-dropper, .date-circle, .list-view 
     font-size: 15px;
     line-height: 1.2;
 }
-
 #anspress .ap-single-vote {
    
     right: 0;
@@ -1353,7 +1302,6 @@ body, header, .wptouch-menu, .pushit, #search-dropper, .date-circle, .list-view 
     -moz-border-radius: 2px;
     -moz-background-clip: padding;
     border-radius: 0%;}
-
 textarea#apfcontents.body-font {
     width: 99%;
     margin-right: 0px;
@@ -1362,9 +1310,6 @@ textarea#apfcontents.body-font {
     padding-left: 0px;
     
 }
-
-
-
 input#apftitle.body-font{
     width: 99%;
     margin-right: 0px;
@@ -1377,7 +1322,6 @@ input#apftitle.body-font{
 select.body-font {
     font-size: inherit;
 }
-
 div#question-paper {
     background: white;
     display: block;
@@ -1398,25 +1342,18 @@ div#question-paper {
 #anspress .ap-about-votes .peity {
     margin-left: 15px;
 }
-
 i.wptouch-icon-caret-down {
     margin-left: -29px;
 }
-
 /*QUESTION PAPER UPLOAD*/
-
-
-
 form#apfform {
     background-color: transparent;
     border-style: dashed;
 }
-
 #apfform p.description.body-font {
     margin-top: 15px;
     margin-bottom: 2px;
 }
-
 #apfform b.body-font {
     background: dodgerblue;
     color: white;
@@ -1431,17 +1368,12 @@ box-shadow: -5px 7px 10px 0px cornflowerblue;
 #apfform input#wp_qp_attachment {
     margin-bottom: 15px;
 }
-
-
 /*LECTURE UPLOAD*/
-
 #apf-text-lecture select.body-font {
     margin-bottom: 12px;
     margin-top: 12px;
 }
-
 /*SUBJECT*/
-
 #anspress .ap-category-item {
     border: 2px solid #eee;
     border-radius: 3px;
@@ -1452,7 +1384,6 @@ box-shadow: -5px 7px 10px 0px cornflowerblue;
     padding-bottom: 0px;
     padding-top: 0px;
    display: block;
-
     }
  
 #anspress .ap-taxo-description {
@@ -1478,35 +1409,22 @@ box-shadow: -5px 7px 10px 0px cornflowerblue;
     padding: 12px 8px;
     transition: 0.3s;
 }
-
 /* media css from desktop*/
-
 #anspress .ap-list-counts, #anspress .ap-questions-item .ap-avatar, #anspress #answer-form-c .ap-avatar {
 display: inline-block;
 float: right;
 }
-
-
-
-
 .ap-avatar.ap-pull-left {
 width: 35px;
 }
-
-
 #anspress .ap-questions-title {
 font-size: 16px;
 font-weight: 500;
 margin-bottom: 0;
 }
-
 .entry-summary, .entry-content {
 text-align: none;
 }
-
-
-
-
 #anspress .ap-list-head .ap-btn-ask {
 display: block;
 float: inherit;
@@ -1516,40 +1434,32 @@ margin-top: 2px;
 margin-left: 2px;
 font-size: medium;
 }
-
-
 #answer-form-c.ap-minimal-editor {
 margin-right: 0px;
 margin-top: 20px;
 padding-top: 0;
 position: inherit;
 }
-
 #answer-form-c .ap-avatar {
 display: inherit;
 float: none !important;
 margin-bottom: -20px;
 margin-top: 0px;
 }
-
 #anspress .ap-term-category-box > li {
 float: left;
 margin: 0;
 padding: 10px;
 width: 100%;
 }
-
 #anspress .ap-q-content {
 font-size: 15px;
 line-height: 1.2;
 }
-
-
 .ap-list-counts {
 margin-right: -69px;
 float: right;
 }
-
 #anspress .ap-filter {
     background: #fff;
     border: 1px solid #ddd;
@@ -1566,7 +1476,6 @@ float: right;
     border-right: 1px solid rgb(238, 238, 238);
     padding: 0px 15px 0px 21px;
 }
-
 div#apf-text {
     margin-left: 0px;
     margin-right: 0px;
@@ -1574,30 +1483,24 @@ div#apf-text {
     padding-right: 0px;
     display: inherit;
 }
-
 /*Books*/
-
 .mbm-book-grid-div {
     display: block;
 }
-
 .mbdb_float_grid {
     float: inherit;
     padding: 10px;
     margin-bottom: 20px;
     /* border: 1px solid red; */
 }
-
 input#submit {
     color: white;
 }
-
 .ap-profile-box.clearfix {
     margin-right: 3px;
     margin-left: -13px;
 }
 /*MY LECTURES*/
-
 .my-article img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     margin-top: -5px;
     margin-bottom: 0px;
@@ -1609,9 +1512,7 @@ input#submit {
     margin-left: -23px;
     margin-right: 0px;
 }
-
 /*CSS ADD*/
-
 .elementor-widget-button a.elementor-button {
     font-family: "Roboto", Sans-serif;
     font-weight: 500;
@@ -1623,12 +1524,10 @@ h2.mbm-book-grid-heading1.heading-font {
     color: white;
 }
 /*WRITE ARTICLES*/
-
 #fep-new-post #fep-post-title, #fep-new-post #fep-tags, #fep-new-post #fep-category {
     box-sizing: border-box;
     width: 100%;
 }
-
 form#fep-submission-form {
     margin-top: -34px;
     background: rgba(255,255,255,.9);
@@ -1651,7 +1550,6 @@ form#fep-submission-form {
 form {
     border: 3px solid #f1f1f1;
 }
-
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
@@ -1662,7 +1560,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
     font-size: 16px;
 }
-
 /* Set a style for all buttons */
 button {
     background-color: #4CAF50;
@@ -1674,42 +1571,35 @@ button {
     width: 100%;
     font-size: 16px;
 }
-
 /* Add a hover effect for buttons */
 button:hover {
     opacity: 0.8;
 }
-
 /* Extra style for the cancel button (red) */
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
 }
-
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
 }
-
 /* Avatar image */
 img.avatar {
     width: 40%;
     border-radius: 50%;
 }
-
 /* Add padding to containers */
 .container {
     padding: 16px;
 }
-
 /* The "Forgot password" text */
 span.psw {
     float: right;
     padding-top: 16px;
 }
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -1732,8 +1622,8 @@ span.psw {
     overflow: auto;
 }
 /* Modal Content/Box */
-.modal-content {     background-color: #fefefe;      margin: 0px auto;      border: 0px solid #888;
-    width: 100%;     height: 100%;
+.modal-content {     background-color: #fefefe;      margin: 0px auto;      border: 0px solid #888;
+    width: 100%;     height: 100%;
 }
 form.modal-content.animate {
     background: rgba(0, 0, 0, 0.36);
@@ -1753,7 +1643,6 @@ p.body-font {
     color: white;
 }
 form.modal-content-register.animate { border: 0; background-color: rgba(0, 0, 0, 0.21); }
-
 /* The Close Button */
 .close {
     /* Position it in the top right corner outside of the modal */
@@ -1764,40 +1653,32 @@ form.modal-content-register.animate { border: 0; background-color: rgba(0, 0, 0,
     font-size: 35px;
     font-weight: bold;
 }
-
 button.body-font-fb.body-font {
     background-color: #2075bf;
 }
-
 button.body-font-google.body-font {
     background-color: #d43f04;
 }
-
-
 /* Close button on hover */
 .close:hover,
 .close:focus {
     color: red;
     cursor: pointer;
 }
-
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
-
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}
 }
-
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }</style><script>// Get the modal
 var modal = document.getElementById('id01');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
