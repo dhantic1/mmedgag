@@ -1816,7 +1816,22 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-	     
+   //google login
+    function login() {
+    window.plugins.googleplus.login(
+        {},
+        function (obj) {
+          //document.querySelector("#image").src = obj.imageUrl;
+          //document.querySelector("#image").style.visibility = 'visible';
+          //document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
+		alert(obj.displayName);
+        },
+        function (msg) {
+          //document.querySelector("#feedback").innerHTML = "error: " + msg;
+		alert(msg);
+        }
+    );
+  }	    
     
     function content() {
 		jQuery('#content a').click(function(e) {
@@ -1872,7 +1887,7 @@ window.onclick = function(event) {
 
       
 <button class="body-font-fb body-font">Login With Facebook</button>
-<button class="body-font-google body-font">Login With Google</button>
+<button class="body-font-google body-font" onclick="loginG()">Login With Google</button>
       </div>
 
     <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
