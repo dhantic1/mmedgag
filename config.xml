@@ -43,6 +43,10 @@
     <plugin name="cordova-plugin-googleplus" source="npm">
     <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.730422706103-74tlb2sd2iv9s7beaf9cs76eklguinr5" />
     </plugin>
+    <plugin name="cordova-plugin-facebook4" source="npm">
+    <variable name="APP_ID" value="591966397669811" />
+    <variable name="APP_NAME" value="Medgag" />
+    </plugin>
     <platform name="android">
         <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
         <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
