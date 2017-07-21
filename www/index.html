@@ -1697,34 +1697,31 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-   //google login
-	   
-    function loginG() {
+  function isAvailable() {
+    window.plugins.googleplus.isAvailable(function(avail) {alert(avail)});
+  }
+  function login() {
     window.plugins.googleplus.login(
         {},
         function (obj) {
-          //document.querySelector("#image").src = obj.imageUrl;
-          //document.querySelector("#image").style.visibility = 'visible';
-          //document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
-		alert(obj.displayName);
+          document.querySelector("#image").src = obj.imageUrl;
+          document.querySelector("#image").style.visibility = 'visible';
+          document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
         },
         function (msg) {
-          //document.querySelector("#feedback").innerHTML = "error: " + msg;
-		alert(msg);
+          document.querySelector("#feedback").innerHTML = "error: " + msg;
         }
     );
-  }	
-	    function logout() {
+  }
+
+	     function logout() {
     window.plugins.googleplus.logout(
         function (msg) {
-          //document.querySelector("#image").style.visibility = 'hidden';
-          //document.querySelector("#feedback").innerHTML = msg;
-		alert(msg);
+          document.querySelector("#image").style.visibility = 'hidden';
+          document.querySelector("#feedback").innerHTML = msg;
         },
         function (msg) {
-          //document.querySelector("#feedback").innerHTML = msg;
-		alert(msg);
-		
+          document.querySelector("#feedback").innerHTML = msg;
         }
     );
   }
@@ -1786,6 +1783,7 @@ window.onclick = function(event) {
 <button class="body-font-google body-font" onclick="loginG()">Login With Google</button>
 	    <button onclick="window.plugins.googleplus.getSigningCertificateFingerprint(function(res){alert(res)}, function(res){alert(res)})">get cert fingerprint (Android)</button>
      <button onclick="logout()">Logout</button>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  </div>
 
     <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
