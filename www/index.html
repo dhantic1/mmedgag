@@ -1716,12 +1716,11 @@ window.onclick = function(event) {
 	    function logout() {
     window.plugins.googleplus.logout(
         function (msg) {
-          //document.querySelector("#image").style.visibility = 'hidden';
-          //document.querySelector("#feedback").innerHTML = msg;
+          
 		alert(msg);
         },
         function (msg) {
-          //document.querySelector("#feedback").innerHTML = msg;
+         
 		alert(msg);
 		
         }
@@ -1739,13 +1738,17 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 );
 	 }
  fuction logoutF() {
-	 facebookConnectPlugin.logout(function (msg) {
-          //document.querySelector("#feedback").innerHTML = msg;
+	 facebookConnectPlugin.logout(
+        function (msg) {
+          
+		alert(msg);
+        },
+        function (msg) {
+         
 		alert(msg);
 		
-        }, function loginError (error) {
-    alert(error);
-  });
+        }
+    );
  }
     function content() {
 		jQuery('#content a').click(function(e) {
