@@ -1716,11 +1716,12 @@ window.onclick = function(event) {
 	    function logout() {
     window.plugins.googleplus.logout(
         function (msg) {
-          
+          //document.querySelector("#image").style.visibility = 'hidden';
+          //document.querySelector("#feedback").innerHTML = msg;
 		alert(msg);
         },
         function (msg) {
-         
+          //document.querySelector("#feedback").innerHTML = msg;
 		alert(msg);
 		
         }
@@ -1728,7 +1729,7 @@ window.onclick = function(event) {
   }
     //Facebook connect
 	    var fbLoginSuccess = function (userData) {
-  document.querySelector("#feedback").innerHTML = userData;
+  alert(userData);
 }
  function loginF() {
 facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
@@ -1737,19 +1738,6 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
   }
 );
 	 }
- fuction logoutF() {
-	 facebookConnectPlugin.logout(
-        function (msg) {
-          
-		alert(msg);
-        },
-        function (msg) {
-         
-		alert(msg);
-		
-        }
-    );
- }
     function content() {
 		jQuery('#content a').click(function(e) {
             e.preventDefault();
@@ -1806,8 +1794,7 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 <button type="button" class="body-font-fb" onclick="loginF()">Login With Facebook</button>
 <button type="button" class="body-font-google" onclick="loginG()">Login With Google</button>
 	    <button type="button" onclick="window.plugins.googleplus.getSigningCertificateFingerprint(function(res){alert(res)}, function(res){alert(res)})">get cert fingerprint (Android)</button>
-     <button type="button" onclick="logout()">Logout Google</button>
-	    <button type="button" onclick="logoutF()">Logout Facebook</button>
+     <button type="button" onclick="logout()">Logout</button>
 	  </div>
 
     <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
