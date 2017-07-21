@@ -1729,7 +1729,7 @@ window.onclick = function(event) {
   }
     //Facebook connect
 	    var fbLoginSuccess = function (userData) {
-  alert(userData);
+  document.querySelector("#feedback").innerHTML = userData.authResponse.userID;
 }
  function loginF() {
 facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
