@@ -1,5 +1,4 @@
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 	<head>
 		<meta charset="UTF-8">
@@ -1697,31 +1696,34 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-  function isAvailable() {
-    window.plugins.googleplus.isAvailable(function(avail) {alert(avail)});
-  }
-  function login() {
+   //google login
+	   
+    function loginG() {
     window.plugins.googleplus.login(
         {},
         function (obj) {
-          document.querySelector("#image").src = obj.imageUrl;
-          document.querySelector("#image").style.visibility = 'visible';
+          //document.querySelector("#image").src = obj.imageUrl;
+          //document.querySelector("#image").style.visibility = 'visible';
           document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
+		//alert(obj.displayName);
         },
         function (msg) {
           document.querySelector("#feedback").innerHTML = "error: " + msg;
+		//alert(msg);
         }
     );
-  }
-
-	     function logout() {
+  }	
+	    function logout() {
     window.plugins.googleplus.logout(
         function (msg) {
-          document.querySelector("#image").style.visibility = 'hidden';
-          document.querySelector("#feedback").innerHTML = msg;
+          //document.querySelector("#image").style.visibility = 'hidden';
+          //document.querySelector("#feedback").innerHTML = msg;
+		alert(msg);
         },
         function (msg) {
-          document.querySelector("#feedback").innerHTML = msg;
+          //document.querySelector("#feedback").innerHTML = msg;
+		alert(msg);
+		
         }
     );
   }
@@ -1769,26 +1771,26 @@ window.onclick = function(event) {
   <form class="modal-content animate">
     
 
-    <div class="app">
-  <img id="image" style="position:absolute; top:10px; left:10px" src="" />
+    <div class="container body-font">
+      
+      
 
-  <h1>Google+</h1>
+      
+      
 
-  <div id="deviceready" class="blink">
-    <p class="event listening">Connecting to Device</p>
-    <p class="event received">Device is Ready</p>
 
-    <p id="feedback">not logged in</p>
-    <button onclick="isAvailable()">Available?</button>
-    <br/><br/>
-    <button onclick="login()">Login with Google+</button>
-    <br/><br/>
-    <button onclick="trySilentLogin()">Try silent login with Google+</button>
-    <br/><br/>
-    <button onclick="logout()">Logout</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button onclick="disconnect()">Disconnect</button>
-    <br/><br/>
-    <button onclick="window.plugins.googleplus.getSigningCertificateFingerprint(function(res){alert(res)}, function(res){alert(res)})">get cert fingerprint (Android)</button>
-  </div>
+
+      
+<button class="body-font-fb body-font">Login With Facebook</button>
+<button class="body-font-google body-font" onclick="loginG()">Login With Google</button>
+	    <button onclick="window.plugins.googleplus.getSigningCertificateFingerprint(function(res){alert(res)}, function(res){alert(res)})">get cert fingerprint (Android)</button>
+     <button onclick="logout()">Logout</button>
+	  </div>
+
+    <div class="container body-font" style="background-color: rgba(241, 241, 241, 0.35);">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn body-font">Cancel</button>
+	    <div id="feedback">Feed Back</div>
+    </div>
+ 
+
 </div></html>
