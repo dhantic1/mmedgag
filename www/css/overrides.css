@@ -1,0 +1,10 @@
+#anspress .ap-avatar img {
+    -webkit-border-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 2px;
+    -moz-background-clip: padding;
+    border-radius: 100%;
+    background-clip: padding-box;
+    box-shadow: none;
+    width: 50px;
+}
