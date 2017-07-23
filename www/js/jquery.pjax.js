@@ -290,7 +290,7 @@ function pjax(options) {
     }
 
     if (options.push || options.replace) {
-      window.history.replaceState(pjax.state, container.title, container.url)
+      window.history.replaceState(pjax.state, container.title, "http://"+document.location.host+"/"+container.url.split("medgag.com")[1].slice(1))
     }
 
     // Only blur the focus if the focused element is within the container.
@@ -365,7 +365,7 @@ function pjax(options) {
       // Cache current container element before replacing it
       cachePush(pjax.state.id, cloneContents(context))
       
-      window.history.pushState(null, "", options.requestUrl)
+      window.history.pushState(null, "", "http://"+document.location.host+"/"+options.requestUrl.split("medgag.com")[1].slice(1))
     }
 
     fire('pjax:start', [xhr, options])
