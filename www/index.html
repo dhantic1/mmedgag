@@ -1625,6 +1625,7 @@ window.onclick = function(event) {
 
 </div><div id="ap-notify"></div><div role="status" id="ap-tags-aria-message" aria-live="polite" aria-atomic="true" class="sr-only"></div><script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.pjax.js"></script>
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
@@ -1696,6 +1697,12 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
       // pjax
       $(document).pjax('a', '#content')
     });
+	    $(document).on('pjax:send', function() {
+  window.plugins.spinnerDialog.show(null, null, true);
+})
+$(document).on('pjax:complete', function() {
+   window.plugins.spinnerDialog.hide();
+})
    </script></body>
 <div id="id01" class="modal" style="display: block;">
 
