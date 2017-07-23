@@ -1687,23 +1687,15 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 });
       });
 	}
-      jQuery('a').click(function(e) {
-            e.preventDefault();
-            window.plugins.spinnerDialog.show(null, null, true);
-            var link = jQuery(this);
-            var page = link.attr('href')+' #content';
-			jQuery("#content").load(page, function(response, status, xhr){
-  if(status == "error") {
-    window.plugins.spinnerDialog.hide();
-	alert("Some error in loading");
-  } else {
-    window.plugins.spinnerDialog.hide();
-    content();
-  }
-});
-            jQuery('#menu-toggle').click();
-          
-      });
+       jQuery('a').on('click', function(e) {
+    
+      e.preventDefault();
+    
+  });
+       $(function(){
+      // pjax
+      $(document).pjax('a', '#content')
+    });
    </script></body>
 <div id="id01" class="modal" style="display: block;">
 
