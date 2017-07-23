@@ -71,7 +71,6 @@ document.addEventListener('deviceready', function () {
 document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown() {
-    history.go(-1);
     navigator.app.backHistory();
 }
 function GooglePlus() {
