@@ -27,9 +27,6 @@
     <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
-     <preference name="AutoHideSplashScreen" value="true" />
-     <preference name="SplashScreen" value="screen" />
-     <preference name="SplashScreenDelay" value="3000" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#009682" />
@@ -62,6 +59,9 @@
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
     </platform>
+     <preference name="AutoHideSplashScreen" value="true" />
+     <preference name="SplashScreen" value="screen" />
+     <preference name="SplashScreenDelay" value="3000" />
     
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
