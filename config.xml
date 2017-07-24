@@ -54,14 +54,14 @@
         <splash src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" density="land-xxxhdpi"/>
         <splash src="www/res/screen/android/drawable-port-ldpi-screen.png" density="port-ldpi"/>
         <splash src="www/res/screen/android/drawable-port-mdpi-screen.png" density="port-mdpi"/>
-        <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png"/>
+        <splash src="www/res/screen/android/drawable-port-hdpi-screen.png" density="port-hdpi"/>
         <splash src="www/res/screen/android/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
     </platform>
      <preference name="AutoHideSplashScreen" value="true" />
      <preference name="SplashScreen" value="screen" />
-     <preference name="SplashScreenDelay" value="3000" />
+     <preference name="SplashScreenDelay" value="30000" />
     
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
