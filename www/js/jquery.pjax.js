@@ -374,6 +374,7 @@ function pjax(options) {
       cachePush(pjax.state.id, cloneContents(context))
       
       window.history.pushState(null, "", "http://"+document.location.host+"/"+options.requestUrl.split("medgag.com")[1].slice(1))
+	    window.plugins.spinnerDialog.show(null, null, true);
 	  if(data){
     options.context.html(data)
 	abortXHR(pjax.xhr)
