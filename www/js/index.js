@@ -64,7 +64,7 @@ document.addEventListener('deviceready', function () {
   // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
   // window.plugins.OneSignal.syncHashedEmail(userEmail);
     //statusbar
-    StatusBar.backgroundColorByHexString("#009682");
+   StatusBar.backgroundColorByName("red");
     
 
 }, false);
