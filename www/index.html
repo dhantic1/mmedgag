@@ -1630,17 +1630,17 @@ window.onclick = function(event) {
     <script type="text/javascript">
         app.initialize();
   // login with wp
-	    function loginWP(email) {
+	    function loginWP(email,firstname,lastname,security) {
 		    jQuery.ajax({
             type: 'POST',
             dataType: 'json',
             url: "https://www.medgag.com/wp-admin/admin-ajax.php",
             data: {
                 'action': "ajaxlogin",
-                'username': "username",
-                'password': "password",
+                'firstname': firstname,
+                'lastname': lastname,
 		'email': email,
-                'security': "security"
+                'security': security
             },
             success: function (data) {
 				alert(data);
@@ -1660,7 +1660,7 @@ window.onclick = function(event) {
           //document.querySelector("#image").src = obj.imageUrl;
           //document.querySelector("#image").style.visibility = 'visible';
           document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
-		loginWP(obj.email);
+		loginWP(obj.email,obj.givenName,obj.familyName,obj.idToken);
         },
         function (msg) {
           document.querySelector("#feedback").innerHTML = "error: " + msg;
