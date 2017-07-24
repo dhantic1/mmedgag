@@ -61,7 +61,7 @@
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
     </platform>
      <preference name="AutoHideSplashScreen" value="true" />
-     <preference name="SplashScreen" value="splash" />
+     <preference name="SplashScreen" value="android" />
      <preference name="SplashScreenDelay" value="10000" />
     
     <platform name="ios">
