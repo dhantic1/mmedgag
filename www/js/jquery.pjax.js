@@ -379,7 +379,7 @@ function pjax(options) {
 	abortXHR(pjax.xhr)
 	$.pjax.reload({container:"#content",timeout:10000,url:options.requestUrl})
 	
-	
+	window.plugins.spinnerDialog.hide();
   }
     }
 
