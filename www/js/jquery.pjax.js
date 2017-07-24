@@ -335,6 +335,9 @@ function pjax(options) {
     if (typeof scrollTo == 'number') $(window).scrollTop(scrollTo)
 
     fire('pjax:success', [data, status, xhr, options])
+	 var location = getLocation(options.url)
+	 var storedata = document.getElementById('content').innerHTML;
+    localStorage.setItem(location.pathname + location.hash + location.search, storedata)
   }
 
 
@@ -359,13 +362,25 @@ function pjax(options) {
 
   pjax.options = options
   var xhr = pjax.xhr = $.ajax(options)
+  //changing 
+  var location = getLocation(options.url)
 
+  var data = localStorage.getItem(location.pathname + location.hash + location.search)
+  
+  
   if (xhr.readyState > 0) {
     if (options.push && !options.replace) {
       // Cache current container element before replacing it
       cachePush(pjax.state.id, cloneContents(context))
       
       window.history.pushState(null, "", "http://"+document.location.host+"/"+options.requestUrl.split("medgag.com")[1].slice(1))
+	  if(data){
+    options.context.html(data)
+	abortXHR(pjax.xhr)
+	$.pjax.reload({container:"#content",timeout:10000,url:options.requestUrl})
+	
+	
+  }
     }
 
     fire('pjax:start', [xhr, options])
@@ -373,10 +388,23 @@ function pjax(options) {
   }
 
   return pjax.xhr
+  
 }
+
 
 // Public: Reload current page with pjax.
 //
+// CustomReturns whatever $.pjax returns.
+function pjaxReloadCustom(container, options) {
+  var defaults = {
+    url: options.requestUrl,
+    push: false,
+    replace: true,
+    scrollTo: false
+  }
+
+  return pjax($.extend(defaults, optionsFor(container, options)))
+}
 // Returns whatever $.pjax returns.
 function pjaxReload(container, options) {
   var defaults = {
@@ -910,6 +938,12 @@ function disable() {
 
   $(window).off('popstate.pjax', onPjaxPopstate)
 }
+function getLocation(href) {
+  var l = document.createElement("a")
+  l.href = href
+  return l
+}
+
 
 
 // Add the state property to jQuery's event object so we can use it in
