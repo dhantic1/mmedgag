@@ -1645,7 +1645,7 @@ window.onclick = function(event) {
             success: function (data) {
 				alert(data);
 				if (data == true) {
-                   alert("logged in");
+                   document.getElementById('id01').style.display='none';
                 }
             }
         });
@@ -1684,7 +1684,7 @@ window.onclick = function(event) {
   }
     //Facebook connect
 	    var fbLoginSuccess = function (userData) {
-  alert(userData);
+  alert(JSON.stringify(userData));
 }
  function loginF() {
 facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
