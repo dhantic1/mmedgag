@@ -47,10 +47,10 @@
     <variable name="APP_NAME" value="Medgag" />
     </plugin>
        <splash src="www/res/screen/android/drawable-land-hdpi-screen.png"/>
-        <preference name="SplashScreen" value="www/res/screen/android/drawable-land-hdpi-screen.png" />
-        <preference name="SplashScreenDelay" value="10000" />
+        <preference name="SplashScreen" value="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
+        <preference name="orientation" value="portrait" />
         <preference name="SplashMaintainAspectRatio" value="false" />
-<preference name="SplashShowOnlyFirstTime" value="false" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
     <platform name="android">
 
 
