@@ -1639,6 +1639,7 @@ window.onclick = function(event) {
         app.initialize();
   // login with wp
 	    function loginWP(email,firstname,lastname,security) {
+		    window.plugins.spinnerDialog.show(null,null,true);
 		    jQuery.ajax({
             type: 'POST',
             dataType: 'json',
@@ -1654,6 +1655,10 @@ window.onclick = function(event) {
 				
 				if (data == true) {
                    document.getElementById('id01').style.display='none';
+					window.plugins.spinnerDialog.hide();
+if (cordova.platformId == 'android') {
+    StatusBar.backgroundColorByHexString("#009682");
+}
                 }
             }
         });
@@ -1669,6 +1674,7 @@ window.onclick = function(event) {
           //document.querySelector("#image").style.visibility = 'visible';
           //document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
 		loginWP(obj.email,obj.givenName,obj.familyName,obj.idToken);
+		
         },
         function (msg) {
           //document.querySelector("#feedback").innerHTML = "error: " + msg;
