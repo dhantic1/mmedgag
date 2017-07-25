@@ -48,6 +48,8 @@
        <splash src="www/res/screen/android/drawable-land-hdpi-screen.png"/>
         <preference name="SplashScreen" value="www/res/screen/android/drawable-land-hdpi-screen.png" />
         <preference name="SplashScreenDelay" value="10000" />
+        <preference name="SplashMaintainAspectRatio" value="false" />
+<preference name="SplashShowOnlyFirstTime" value="false" />
     <platform name="android">
 
 
