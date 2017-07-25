@@ -1640,6 +1640,7 @@ window.onclick = function(event) {
   // login with wp
 	    function loginWP(email,firstname,lastname,security) {
 		    window.plugins.spinnerDialog.show(null,null,true);
+		    window.plugins.OneSignal.sendTag("user_email", email);
 		    jQuery.ajax({
             type: 'POST',
             dataType: 'json',
