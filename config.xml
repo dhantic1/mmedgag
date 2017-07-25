@@ -45,10 +45,13 @@
     <variable name="APP_ID" value="591966397669811" />
     <variable name="APP_NAME" value="Medgag" />
     </plugin>
-    <platform name="android">
-        <splash src="splash.png" />
-        <preference name="SplashScreen" value="www/res/screen/" />
+       <splash src="www/res/screen/android/drawable-land-hdpi-screen.png"/>
+        <preference name="SplashScreen" value="www/res/screen/android/drawable-land-hdpi-screen.png" />
         <preference name="SplashScreenDelay" value="10000" />
+    <platform name="android">
+
+
+
         <splash src="www/res/screen/android/drawable-land-hdpi-screen.png" density="land-ldpi"/>
         <splash src="www/res/screen/android/drawable-land-mdpi-screen.png" density="land-mdpi"/>
         <splash src="www/res/screen/android/drawable-land-hdpi-screen.png" density="land-hdpi"/>
