@@ -1624,7 +1624,7 @@ window.onclick = function(event) {
 
 </div><div id="ap-notify"></div><div role="status" id="ap-tags-aria-message" aria-live="polite" aria-atomic="true" class="sr-only"></div><script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.pjax.js"></script>
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
@@ -1694,12 +1694,12 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 );
 	 }
     function content() {
-		$('#content a').click(function(e) {
+		jQuery('#content a').click(function(e) {
             e.preventDefault();
             window.plugins.spinnerDialog.show(null, null, true);
-            var link = $(this);
+            var link = jQuery(this);
             var page = link.attr('href')+' #content';
-			$("#content").load(page, function(response, status, xhr){
+			jQuery("#content").load(page, function(response, status, xhr){
   if(status == "error") {
     window.plugins.spinnerDialog.hide();
 	alert("Some error in loading");
@@ -1710,19 +1710,19 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 });
       });
 	}
-       $('a').on('click', function(e) {
+       jQuery('a').on('click', function(e) {
     
       e.preventDefault();
     
   });
-       $(function(){
+       jQuery(function(){
       // pjax
-      $(document).pjax('a', '#content')
+      jQuery(document).pjax('a', '#content')
     });
-	    $(document).on('pjax:send', function() {
+	    jQuery(document).on('pjax:send', function() {
   //window.plugins.spinnerDialog.show(null, null, true);
 })
-$(document).on('pjax:complete', function() {
+jQuery(document).on('pjax:complete', function() {
    window.plugins.spinnerDialog.hide();
 })
    </script></body>
