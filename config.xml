@@ -46,7 +46,7 @@
     <variable name="APP_ID" value="591966397669811" />
     <variable name="APP_NAME" value="Medgag" />
     </plugin>
-        <splash src="www/res/screen/android/drawable-port-hdpi-screen.png"/>
+        <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"/>
         <preference name="SplashScreen" value="www/res/screen" />
         <preference name="orientation" value="portrait" />
         <preference name="SplashScreenDelay" value="8000" />
