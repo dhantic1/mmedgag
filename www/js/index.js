@@ -50,9 +50,7 @@ var app = {
 document.addEventListener('deviceready', function () {
   // Enable to debug issues.
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  if (cordova.platformId == 'android') {
-    StatusBar.backgroundColorByHexString("#333");
-}
+ 
   var notificationOpenedCallback = function(jsonData) {
     alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
