@@ -49,7 +49,7 @@
         <splash src="www/res/screen/android/drawable-port-hdpi-screen.png"/>
         <preference name="SplashScreen" value="www/res/screen" />
         <preference name="orientation" value="portrait" />
-        <preference name="SplashScreenDelay" value="3000" />
+        <preference name="SplashScreenDelay" value="8000" />
         <preference name="SplashMaintainAspectRatio" value="false" />
         <preference name="SplashShowOnlyFirstTime" value="false" />
     <platform name="android">
