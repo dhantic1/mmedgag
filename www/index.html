@@ -116,7 +116,6 @@ img.emoji {
 <link rel='stylesheet' id='elementor-frontend-css'  href='css/frontend.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-global-css'  href='css/global.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-2360-css'  href='css/post-2360.css' type='text/css' media='all' />
-<script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/wp-a11y.min.js'></script>
 <!--[if lt IE 8]>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/json2.min.js'></script>
@@ -1533,7 +1532,7 @@ span.psw {
 }
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    span.psw {
+    span.psw {f
         display: block;
         float: none;
     }
@@ -1695,12 +1694,12 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 );
 	 }
     function content() {
-		jQuery('#content a').click(function(e) {
+		$('#content a').click(function(e) {
             e.preventDefault();
             window.plugins.spinnerDialog.show(null, null, true);
-            var link = jQuery(this);
+            var link = $(this);
             var page = link.attr('href')+' #content';
-			jQuery("#content").load(page, function(response, status, xhr){
+			$("#content").load(page, function(response, status, xhr){
   if(status == "error") {
     window.plugins.spinnerDialog.hide();
 	alert("Some error in loading");
@@ -1711,7 +1710,7 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
 });
       });
 	}
-       jQuery('a').on('click', function(e) {
+       $('a').on('click', function(e) {
     
       e.preventDefault();
     
