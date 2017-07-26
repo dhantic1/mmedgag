@@ -400,3 +400,6 @@ input#fep-post-title {
 a#mbdb_add_book_grid_fep-post-content {
     display: none;
 }
+div#content {
+    margin-top: 56px;
+}
