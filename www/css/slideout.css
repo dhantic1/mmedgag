@@ -9,6 +9,7 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: none;
+    margin-top: 53px
 }
 
 .slideout-menu.pushit-right {
