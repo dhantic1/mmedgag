@@ -39,11 +39,12 @@ header a, header div {
 }
 
 header {
-	position: relative;
-	opacity: 1;
-	overflow: hidden;
-	height: 54px;
-	z-index: 4;
+	position: fixed;
+    opacity: 1;
+    overflow: hidden;
+    height: 54px;
+    z-index: 4;
+    width: 100%;
 }
 
 header a.header-center {
@@ -63,6 +64,7 @@ header h1 {
 	font-weight: normal;
 	font-style: normal;
 	line-height: 2.25;
+	color: white;
 }
 
 header img {
@@ -89,6 +91,7 @@ header img {
 	bottom: 0;
 	left: 0;
 	right: auto;
+	color: white;
 }
 
 #menu-toggle.menu-right {
@@ -117,6 +120,7 @@ header img {
 	bottom: 0;
 	left:  auto;
 	right: 0;
+	color: white;
 }
 
 #search-toggle:after {
