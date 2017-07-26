@@ -1701,6 +1701,19 @@ if (cordova.platformId == 'android') {
     //Facebook connect
 	    var fbLoginSuccess = function (userData) {
   alert(JSON.stringify(userData));
+		    facebookConnectPlugin.api(userData.authResponse.userID+"/?fields=id,email", ["user_birthday"],
+	function (result) {
+		alert("Result: " + JSON.stringify(result));
+		/* alerts:
+			{
+				"id": "000000123456789",
+				"email": "myemail@example.com"
+			}
+		*/
+	},
+	function (error) {
+		alert("Failed: " + error);
+	});
 }
  function loginF() {
 facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
