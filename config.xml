@@ -42,10 +42,10 @@
     <plugin name="cordova-plugin-googleplus" source="npm">
     <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.730422706103-74tlb2sd2iv9s7beaf9cs76eklguinr5" />
     </plugin>
-        <gap:plugin name="com.phonegap.plugins.facebookconnect">
+        <plugin name="phonegap-facebook-plugin">
        <param name="APP_ID" value="591966397669811" />
         <param name="APP_NAME" value="Medgag" />
-    </gap:plugin>
+    </plugin>
     
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"/>
         <preference name="SplashScreen" value="www/res/screen" />
