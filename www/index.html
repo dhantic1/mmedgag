@@ -2276,15 +2276,16 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-	    checklogin();
+	    
 	    function checklogin() {
 		    var loginvalue = localStorage.getItem("loginvalue");
-	    if (loginvalue) {
+	    if (loginvalue == "true") {
 		    document.getElementById('id01').style.display='none';
 	    } else {
 		 document.getElementById('id01').style.display='block';   
 	    }
 	    }
+	    checklogin();
   // login with wp
 	    function loginWP(email,firstname,lastname,security) {
 		    window.plugins.spinnerDialog.show(null,null,true);
