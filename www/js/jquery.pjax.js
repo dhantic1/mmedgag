@@ -911,7 +911,7 @@ function enable() {
     dataType: 'html',
     scrollTo: 0,
     maxCacheLength: 20,
-	fragment: ".content-wrap",
+	fragment: "#content",
     version: findVersion
   }
   $(window).on('popstate.pjax', onPjaxPopstate)
