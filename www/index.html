@@ -76,12 +76,12 @@ img.emoji {
 	 font-family: 'Roboto', sans-serif;
 }
 </style>
-<link rel='stylesheet' id='foundation_flickity_css-css'  href='./css/flickity.min.css' type='text/css' media='screen' />
-<link rel='stylesheet' id='foundation_slideout-css'  href='./css/slideout.css' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='./css/dashicons.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='customize-preview-css'  href='./css/customize-preview.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='foundation-framework-style-css'  href='./css/style.css' type='text/css' media='all' />
-<link rel='stylesheet' id='ap-theme-css-css'  href='./css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='foundation_flickity_css-css'  href='css/flickity.min.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='foundation_slideout-css'  href='css/slideout.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='css/dashicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='customize-preview-css'  href='css/customize-preview.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='foundation-framework-style-css'  href='css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ap-theme-css-css'  href='css/main.css' type='text/css' media='all' />
 <style id='ap-theme-css-inline-css' type='text/css'>
         #anspress .ap-q-cells{
             margin-left: 60px;
@@ -93,10 +93,10 @@ img.emoji {
         }
 </style>
 		
-<link rel='stylesheet' id='ap-fonts-css'  href='./css/style(1).css' type='text/css' media='all' />
-<link rel='stylesheet' id='ap-mention-css-css'  href='./css/mention.css' type='text/css' media='all' />
-<link rel='stylesheet' id='categories_for_anspress_css-css'  href='./css/categories.css' type='text/css' media='all' />
-<link rel='stylesheet' id='tags_css-css'  href='./css/tags.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ap-fonts-css'  href='css/style(1).css' type='text/css' media='all' />
+<link rel='stylesheet' id='ap-mention-css-css'  href='css/mention.css' type='text/css' media='all' />
+<link rel='stylesheet' id='categories_for_anspress_css-css'  href='css/categories.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tags_css-css'  href='css/tags.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ap-overrides-css'  href='./css/overrides.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elusive-css'  href='./css/elusive.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'  href='css/font-awesome.min.css' type='text/css' media='all' />
@@ -1663,15 +1663,7 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-	     checklogin();
-	    function checklogin() {
-		    var loginvalue = window.localStorage.getItem("loginvalue");
-	    if (loginvalue == 'true') {
-		    document.getElementById('id01').style.display='none';
-	    } else {
-		 document.getElementById('id01').style.display='block';   
-	    }
-	    }
+	     
 	    
   // login with wp
 	    function loginWP(email,firstname,lastname,security) {
@@ -1691,7 +1683,7 @@ window.onclick = function(event) {
             success: function (data) {
 				
 				if (data == true) {
-		  window.localStorage.setItem("loginvalue","true");
+		  
                    document.getElementById('id01').style.display='none';
 					window.plugins.spinnerDialog.hide();
 if (cordova.platformId == 'android') {
