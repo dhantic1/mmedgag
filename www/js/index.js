@@ -52,7 +52,9 @@ document.addEventListener('deviceready', function () {
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
  
   var notificationOpenedCallback = function(jsonData) {
-    alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+   // alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+      $url = jsonData.notification.payload.additionalData.myappurl;
+      $.pjax({url: $url, container: '#content'});
   };
 
   window.plugins.OneSignal
