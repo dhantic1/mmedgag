@@ -94,7 +94,6 @@ img.emoji {
 </style>
 		
 <link rel='stylesheet' id='ap-fonts-css'  href='css/style(1).css' type='text/css' media='all' />
-<link rel='stylesheet' id='arka-css'  href='css/arka.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ap-mention-css-css'  href='css/mention.css' type='text/css' media='all' />
 <link rel='stylesheet' id='categories_for_anspress_css-css'  href='css/categories.css' type='text/css' media='all' />
 <link rel='stylesheet' id='tags_css-css'  href='css/tags.css' type='text/css' media='all' />
@@ -119,10 +118,12 @@ img.emoji {
 <link rel='stylesheet' id='elementor-global-css'  href='css/global.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-2360-css'  href='css/post-2360.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-1049-css'  href='css/post-1049.css' type='text/css' media='all' />
+<link rel='stylesheet' id='arka-css'  href='css/arka.css' type='text/css' media='all' />		
 	
 		
 <script type='text/javascript' src='https://www.medgag.com/wp-content/plugins/advanced-ajax-page-loader/jquery.js'></script>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/wp-a11y.min.js'></script>
+<script type='text/javascript' src='js/arka.js'></script>		
 <!--[if lt IE 8]>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/json2.min.js'></script>
 <![endif]-->
@@ -295,9 +296,7 @@ var sidebar_login_params = {"ajax_url":"https:\/\/www.medgag.com\/wp-admin\/admi
 You can add your own CSS here.
 Click the help icon above to learn more.
 */
-
 /*End od mobile css*/
-
 		</style>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, user-scalable=no, width=device-width" /><link rel="apple-touch-icon-precomposed" href="https://www.medgag.com/wp-content/plugins/wptouch-pro/admin/images/default-bookmark.png" />
 
@@ -933,7 +932,6 @@ var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/wp-util.min.js'></script>
-<script type='text/javascript' src='js/arka.js'></script>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/customize-selective-refresh.min.js'></script>
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/jquery/ui/position.min.js'></script>
 <script type='text/javascript' src='https://www.medgag.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js'></script>
@@ -1472,10 +1470,37 @@ form#fep-submission-form {
     margin-top: -34px;
     background: rgba(255,255,255,.9);
     border: 1px solid;
-
+/*DESKTOP CSS ADD*/
+.ap-widget-pos, .widget {
+    margin-bottom: 0px;
+}
+#anspress .ap-subscribe-btn {
+    margin-bottom: 8px;
+    margin-top: 30px;
+}
+.widget .ap-question-subscribers a, .ap-widget-pos .ap-question-subscribers a {
+    margin: 5px;
+    display: inline-block;
+}
+.widget .ap-question-subscribers a>img, .ap-widget-pos .ap-question-subscribers a>img {
+    margin: 0;
+    display: block;
+}
+.avatar {
+    border-radius: 0px;
+}
 </style><!--Bauhaus v2.0.6-->		</div>
 		
-					
+					<a href="#" class="back-to-top">Back to top</a>
+		
+		
+		<div class="wptouch-mobile-switch">
+
+	
+	
+	
+</div>	<!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
 <style>/* The Modal (background) */
 /* Bordered form */
@@ -1637,7 +1662,6 @@ window.onclick = function(event) {
     <link rel='stylesheet'  href=‘css/index.css’ type='text/css'  />
     <script type="text/javascript">
         app.initialize();
-	     
 	    
   // login with wp
 	    function loginWP(email,firstname,lastname,security) {
