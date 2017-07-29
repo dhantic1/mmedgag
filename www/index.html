@@ -1650,7 +1650,7 @@ window.onclick = function(event) {
             success: function (data) {
 				
 				if (data == true) {
-		  window.localStorage["login"] = 'true';
+		  window.localStorage.setItem("loginvalue", "true");
                    document.getElementById('id01').style.display='none';
 					window.plugins.spinnerDialog.hide();
 if (cordova.platformId == 'android') {
@@ -1780,9 +1780,17 @@ $(document).on('pjax:complete', function() {
 jQuery( document ).ready(function() {
     openCity(event, 'London');
 });
-	    if (window.localStorage["login"] == 'true') {
-		    document.getElementById('id01').style.display='none';
-		    }
+	   function checklogin() { 
+var loginvalue = window.localStorage.getItem("loginvalue"); 
+if (loginvalue == "true") { 
+document.getElementById('id01').style.display='none'; 
+	alert("wrok");
+} else { 
+document.getElementById('id01').style.display='block'; 
+	alert(loginvalue);
+} 
+} 
+	    checklogin();
    </script></body>
 <div id="id01" class="modal" style="display: block;">
 
