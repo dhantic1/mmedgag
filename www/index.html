@@ -1792,7 +1792,9 @@ document.getElementById('id01').style.display='block';
 } 
 	    checklogin();
 	function logoutWP() {
-		window.localStorage.removeItem("lastname");
+		window.localStorage.removeItem("loginvalue");
+		logout();
+		checklogin();
 		
 		}
    </script></body>
