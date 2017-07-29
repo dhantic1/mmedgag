@@ -202,7 +202,7 @@
 /* Style the tab */
 div.tab {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 10px solid #ccc;
     background-color: #f1f1f1;
 }
 
