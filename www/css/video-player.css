@@ -2,14 +2,16 @@
  * Video player container
  */
 .cvwp-video-player{
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #000;
-	
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		 background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover! important;
+    display: inline-block! important;
+    position: relative! important;
+    overflow: hidden;
 }
 	/**
 	 * Lazy load play video link
