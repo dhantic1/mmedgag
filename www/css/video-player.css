@@ -8,9 +8,9 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover! important;
-    display: inline-block! important;
-    position: relative! important;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
     overflow: hidden;
 }
 	/**
