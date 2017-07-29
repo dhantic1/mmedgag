@@ -1784,10 +1784,10 @@ jQuery( document ).ready(function() {
 var loginvalue = window.localStorage.getItem("loginvalue"); 
 if (loginvalue == "true") { 
 document.getElementById('id01').style.display='none'; 
-	alert("wrok");
+	
 } else { 
 document.getElementById('id01').style.display='block'; 
-	alert(loginvalue);
+	
 } 
 } 
 	    checklogin();
@@ -1810,7 +1810,7 @@ document.getElementById('id01').style.display='block';
 
 
       
-<button type="button" class="body-font-fb" onclick="checklogin()">Login With Facebook</button>
+<button type="button" class="body-font-fb" onclick="loginF()">Login With Facebook</button>
 <button type="button" class="body-font-google" onclick="loginG()">Login With Google</button>
 	    
 	  </div>
