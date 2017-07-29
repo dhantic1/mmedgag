@@ -21,6 +21,6 @@
                 height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-image: url(../images/play-button.png);
+                background-image: url(img/play-button.png);
                 overflow: hidden;
 	}
