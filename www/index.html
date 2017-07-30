@@ -3,9 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Mobile - MedGag</title>
-		<body data-rsssl=1 class="page-template-default page page-id-2360 logged-in light-body dark-header dark-post-head body-font smartphone portrait ios7 theme-bauhaus circles off-canvas list-view fonts-alegreya_roboto elementor-default elementor-page elementor-page-2360">
-		
-<script type="text/javascript">var ajaxurl = "https://www.medgag.com/wp-admin/admin-ajax.php",ap_nonce 	= "dfe92b02eb",ap_max_tags = "5",disable_hover_card = "";disable_q_suggestion = "";var apMentions = [{"name":"Mrinmoy Das","login":"mrinmoy"},{"name":"admin","login":"admin"},{"name":"Medgag Diagnostic Lab","login":"medgag.com@gmail.com"}];
+		<script type="text/javascript">var ajaxurl = "https://www.medgag.com/wp-admin/admin-ajax.php",ap_nonce 	= "dfe92b02eb",ap_max_tags = "5",disable_hover_card = "";disable_q_suggestion = "";var apMentions = [{"name":"Mrinmoy Das","login":"mrinmoy"},{"name":"admin","login":"admin"},{"name":"Medgag Diagnostic Lab","login":"medgag.com@gmail.com"}];
 		    	var cachequeryMentions = [], itemsMentions,
 		    	at_config = {
 			      at: "@",
@@ -133,6 +131,10 @@ img.emoji {
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/json2.min.js'></script>
 <![endif]-->
 <script type='text/javascript' src='https://www.medgag.com/wp-includes/js/underscore.min.js'></script>
+$(document).on('pjax:complete', function() {
+            $.ajaxSetup({ cache: true});
+            $.getScript("js/video-player2', true);?>");                           
+            });
 <script type='text/javascript' src='https://www.medgag.com/wp-content/plugins/videographywp/assets/front-end/js/video-player2.js'></script>		
 <script type='text/javascript' src='https://www.medgag.com/wp-content/plugins/better-amp/template/customizer/customize-preview.js'></script>
 <script type='text/javascript' src='https://www.medgag.com/wp-content/plugins/anspress-3.0.7/theme/default/js/jquery.peity.min.js?v=3.0.7'></script>
@@ -724,7 +726,8 @@ ul.menu-tree.no-parent-links span, ul.menu-tree ul span {
 					</a>
 		<div id="menu-toggle" class="menu-btn tappable show-hide-toggle menu-left" data-effect-target="menu" data-menu-target="menu" role="button"><!--icon-reorder--></div>
 	</header></head>
-
+	
+<body data-rsssl=1 class="page-template-default page page-id-2360 logged-in light-body dark-header dark-post-head body-font smartphone portrait ios7 theme-bauhaus circles off-canvas list-view fonts-alegreya_roboto elementor-default elementor-page elementor-page-2360">
 	
 
 		
