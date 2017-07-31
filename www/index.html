@@ -1769,38 +1769,7 @@ document.getElementById('id01').style.display='block';
 		
 		}
 	    
-   $(function($){
-	var  $doc = $(document);
-
-	/** create mod exec controller */
-	$.readyFn = {
-		list: [],
-		register: function(fn) {
-			$.readyFn.list.push(fn);
-		},
-		execute: function() {
-			for (var i = 0; i < $.readyFn.list.length; i++) {
-				try {
-				   $.readyFn.list[i].apply(document, [$]);
-				}
-				catch (e) {
-					throw e;
-				}
-			};
-		}
-	};
-
-	/** run all functions */
-	$doc.ready(function(){
-		$.readyFn.execute();
-	});
-
-	/** register function */
-	$.fn.ready = function(fn) {
-		$.readyFn.register(fn);
-	};
-
-})(jQuery);
+   
 	    </script>
 </body>
 <div id="id01" class="modal" style="display: block;">
