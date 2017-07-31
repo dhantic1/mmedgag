@@ -3,42 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Mobile - MedGag</title>
-		<script type="text/javascript">var ajaxurl = "https://www.medgag.com/wp-admin/admin-ajax.php",ap_nonce 	= "dfe92b02eb",ap_max_tags = "5",disable_hover_card = "";disable_q_suggestion = "";var apMentions = [{"name":"Mrinmoy Das","login":"mrinmoy"},{"name":"admin","login":"admin"},{"name":"Medgag Diagnostic Lab","login":"medgag.com@gmail.com"}];
-		    	var cachequeryMentions = [], itemsMentions,
-		    	at_config = {
-			      at: "@",
-			      data: apMentions,
-			      headerTpl: '<div class="atwho-header">Member List<small>↑&nbsp;↓&nbsp;</small></div>',
-			      insertTpl: "@${login}",
-			      displayTpl: '<li data-value="${login}">${name} <small>@${login}</small></li>',
-			      limit: 50,
-			      callbacks: {
-				    remoteFilter: function (query, render_view) {
-	                    var thisVal = query,
-	                    self = jQuery(this);
-	                    if( !self.data("active") && thisVal.length >= 2 ){
-	                        self.data("active", true);                            
-	                        itemsMentions = cachequeryMentions[thisVal]
-	                        if(typeof itemsMentions == "object"){
-	                            render_view(itemsMentions);
-	                        }else
-	                        {                            
-	                            if (self.xhr) {
-	                                self.xhr.abort();
-	                            }
-	                            self.xhr = jQuery.getJSON(ajaxurl+"?ap_ajax_action=search_mentions&action=ap_ajax&ap_ajax_nonce="+ap_nonce,{
-	                                term: thisVal
-	                            }, function(data) {
-	                                cachequeryMentions[thisVal] = data
-	                                render_view(data);
-	                            });
-	                        }                            
-	                        self.data("active", false);                            
-	                    }                    
-	                }
-				  }
-			 };
-		    </script>
+		
 <!-- This site is optimized with the Yoast SEO plugin v4.9 - https://yoast.com/wordpress/plugins/seo/ -->
 <!-- Admin only notice: this page doesn't show a meta description because it doesn't have one, either write it for this page specifically or go into the SEO -> Titles menu and set up a template. -->
 
@@ -1475,7 +1440,7 @@ body, header, .wptouch-menu, .pushit, #search-dropper, .date-circle, .list-view 
 	
 	
 </div>	<!-- Button to open the modal login form -->
-<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+<button onclick="$.readyFn.execute()">Login</button>
 
 <style>/* The Modal (background) */
 /* Bordered form */
@@ -1803,7 +1768,40 @@ document.getElementById('id01').style.display='block';
 		checklogin();
 		
 		}
-   </script>
+	    
+   (function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+	    </script>
 </body>
 <div id="id01" class="modal" style="display: block;">
 
