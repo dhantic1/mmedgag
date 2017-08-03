@@ -1701,7 +1701,10 @@ facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
   //window.plugins.spinnerDialog.show(null, null, true);
 })
 $(document).on('pjax:complete', function() {
-   window.plugins.spinnerDialog.hide();
+   var content = document.getElementById('content'); var arr = content.getElementsByTagName('script')
+for (var n = 0; n < arr.length; n++)
+    eval(arr[n].innerHTML)
+	window.plugins.spinnerDialog.hide();
 })
 	    var slideout = new Slideout({
     'panel': document.getElementById('ppanel'),
